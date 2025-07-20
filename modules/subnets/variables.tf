@@ -12,3 +12,8 @@ variable "subnet_count" {
     type = number
     description = "Number of subnets to create"
 }
+
+variable "subnet_name_prefix" {
+    type = string
+    description = "Prefix for subnet names"
+}

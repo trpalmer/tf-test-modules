@@ -3,5 +3,7 @@ locals {
 }
 
 output "subnets" {
-  value = local.subnets
+  value = {
+    for i, subnet in local.subnets : "${var.subnet_name_prefix}-${i}" => subnet
+  }
 }
